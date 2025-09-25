@@ -1,0 +1,11 @@
+p{
+    background-color: brown;
+    font-family:monospace;
+}
+*{
+    font-variant:small-caps ;
+}
+
+.p1{
+    color:chartreuse;
+}
