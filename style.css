@@ -9,3 +9,11 @@ p{
 .p1{
     color:chartreuse;
 }
+
+.container{
+    background-image: url("pikachu.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; 
+}
