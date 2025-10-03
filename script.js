@@ -179,3 +179,46 @@ switch(num){
         day='Invalid input'
 }
 console.log(day)
+
+
+//day 03.10.2025
+let sum = 0;
+let n = 10;
+for(let i=0;i<=n;i++){
+    sum += i;
+}
+console.log("sum is : ",sum);
+
+
+//while loop
+let nu = 0
+while(nu<=20){
+    console.log(nu);
+    nu++
+} 
+console.log("EVEN NUMBERS")
+let number = 2 ;
+while(number<=20){
+    console.log(number);
+    number = number+2
+}
+console.log("ODD NUMBERS")
+let numodd = 1 ;
+while(numodd<=20){
+    console.log(numodd);
+    numodd = numodd+2
+}
+
+console.log("DO While Loop")
+let i = 5;
+do{
+console.log(i);
+i--
+}while(i>0)
+
+console.log("1 to 5")
+let ai=1;
+do{
+    console.log(ai)
+    ai++
+}while(ai<=5)
