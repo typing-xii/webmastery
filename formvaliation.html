@@ -68,9 +68,23 @@
 
 
             if(username===""|| enmail===""||password===""){
-                
+                errormsg.textContent="All feilds are required !!";
+                return;
             }
-        })
+
+            const emailpattern = /^][^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if(!email.match(emailpattern)){
+                errormsg.textContent="Please Enter a valid email";
+                return;
+            }
+
+            if(password.length<6){
+                errormsg.textContent="Password Must be t least 6 character";
+            }
+
+            errormsg.style.color="green";
+            errormsg.textContent="form submitted successfully !!";
+        });
     </script>
 </body>
 </html>
