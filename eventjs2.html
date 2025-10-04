@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event 2</title>
+    <style>
+        button{
+            background: green;
+            border: none;
+            border-radius:10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Event Handling</h1>
+    <button id="clickbtn">Click Me</button>
+    <p id="clickresult"></p>
+
+    <input type="text" placeholder="type something (key-press)" id="keypress">
+    <p id="keypressresult"></p>
+
+    <input type="text" placeholder="Start typing .. " id="typeinfo">
+    <p id="typeresult"></p>
+
+    <form id="forminput">
+        <input type="text" placeholder="enter you name . . "><br><br>
+        <button type="submit">Submit</button>
+    </form>
+  <p id="formresult"></p>
+    <script>
+        document.getElementById("clickbtn").addEventListener("click",function(){
+            document.getElementById("clickresult").textContent="Clicked the button !!";
+        });
+
+        document.getElementById("keypress").addEventListener("keypress", function(event){
+            document.getElementById("keypressresult").textContent="Pressed : "+event.key;
+        });
+
+        document.getElementById("typeinfo").addEventListener("input",function(event){
+            document.getElementById("typeresult").textContent="Input : "+event.target.value;
+        });
+
+        document.getElementById("myform").addEventListener("submit",function(event){
+            event.preventDefault();
+            document.getElementById("formresult").textContent="Form is submitted";
+        });
+    </script>
+</body>
+</html>

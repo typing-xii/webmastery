@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in Js</title>
+</head>
+<body>
+    <!-- Click Events -->
+    <button id="clickBtn">Click Me</button>
+    <p id="clickResult"></p>
+
+    <input type="text" placeholder="Type Something ..." id="KeyInput">
+    <p id="Keyresult"></p>
+
+    <input type="text" placeholder="Live Typing" id="liveinput">
+    <p id="liveresult"></p>
+
+    <form id="myform">
+        <input type="text" placeholder="Enter you name .."><br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="formresult"></p>
+
+    <script>
+        document.getElementById("clickBtn").addEventListener("click",function(){
+            document.getElementById("clickResult").textContent="Button was clicked !! ";
+        });
+
+        document.getElementById("KeyInput").addEventListener("keypress",function(event){
+            document.getElementById("Keyresult").textContent = "You pressed : "+event.key;
+        });
+
+        document.getElementById("liveinput").addEventListener("input",function(event){
+            document.getElementById("liveresult").textContent="INPUT IS:"+event.target.value;
+        });
+
+        document.getElementById("myform").addEventListener("submit",function(event){
+            event.preventDefault();
+            document.getElementById("formresult").textContent="form submitted";
+        });
+    </script>
+</body>
+</html>
