@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Litrales</title>
+</head>
+<body>
+    <h1>Template Literls Emaple</h1>
+    <p id="output"></p>
+    <button id="btn">Show Message</button>
+
+    <script>
+
+        document.getElementById('btn').addEventListener('click',()=>{
+            let name = "Ramesh";
+            let age = 20;
+
+            let message = `Hello,  my name is ${name} and I am ${age} years old`;
+
+
+            let intro = `This is line one.
+            This is line two.
+            and this is line three`;
+
+            document.getElementById("output").innerHTML=message + "<br><br>"+intro;
+        })
+    </script>
+</body>
+</html>
