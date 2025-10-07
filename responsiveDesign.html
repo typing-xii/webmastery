@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background: #868080;
+            min-height: 100vh;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container{
+            background:rgb(98,57,57);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            min-width: 280px;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        h2{
+            color: white;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input,textarea,button{
+            padding: 10px;
+            font-size: 1rem;
+            border:  1px solid #ccc;
+            border-radius: 6px;
+            width: 100%;
+        }
+
+        button{
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+/*responsive img box*/
+        .image-box {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        img{
+            width: 100%;
+            height: auto;
+            border-radius: 10px; 
+        }
+
+        /* form layout for larger screen */
+        @media (min-width :700px) {
+            form{
+                flex-direction: column;
+                align-items: center;
+            }
+            input[type="text"],input[type="email"],textarea{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-box">
+            <picture>
+                <source media="(min-width:901px)" srcset="baymax-big-hero.jpg" type="image/jpg">
+                <source media="(min-width: 600px)" srcset="pikachu.jpg" type="image/jpg">
+   
+                <img src="pikachu.jpg" 
+                srcset="pikachu.jpg 480w , baymax-big-hero.jpg 800w ,pikachu.jpg 1200w"
+                sizes="(min-width:600px) 100vw,600px" alt="responsive illustration">
+            
+            </picture>
+        </div>
+
+        <h1>Contact Us</h1>
+        <form action="">
+
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your message" rows="4"></textarea>
+            <button type="submit">Send</button>
+        </form> 
+    </div>
+</body>
+</html>

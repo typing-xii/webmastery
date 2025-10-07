@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack</title>
+</head>
+<body>
+    <h1>CallBack Example</h1>
+    <p id="output"></p>
+    <script>
+        function fetchdata(callback){
+            setTimeout(()=>{
+                callback("Data recived using callback")
+            },2000)
+        }
+
+        fetchdata(function(message){
+            document.getElementById("output").textContent=message;
+        })
+    </script>
+</body>
+</html>
